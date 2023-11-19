@@ -57,17 +57,17 @@ const Interface = () => {
       <form onSubmit={handleSubmit}>
         {errorMessage && <span style={{ color: 'red' }}>{errorMessage}</span>}
 
-        <label htmlFor="name" data-testid="name">
+        <label htmlFor="name" name="name">
           Name:
         </label>
         <input type="text" placeholder="example" data-testid="name" value={userInput.name} onChange={updateInput} />
 
-        <label htmlFor="email" data-testid="email">
+        <label htmlFor="email" name="email">
           Email address:
         </label>
         <input type="text" placeholder="example@gmail.com" data-testid="email" value={userInput.email} onChange={updateInput} />
 
-        <label htmlFor="gender" data-testid="gender">
+        <label htmlFor="gender" name="gender">
           Gender:
         </label>
         <select data-testid="gender" value={userInput.gender} onChange={updateInput}>
@@ -76,12 +76,12 @@ const Interface = () => {
           <option value="other">Other</option>
         </select>
 
-        <label htmlFor="phoneNumber" data-testid="phoneNumber">
+        <label htmlFor="phoneNumber" name="phoneNumber">
           Phone Number:
         </label>
         <input type="text" placeholder="phoneno" data-testid="phoneNumber" value={userInput.phoneNumber} onChange={updateInput} />
 
-        <label htmlFor="password" data-testid="password">
+        <label htmlFor="password" name="password">
           Password:
         </label>
         <input type="password" placeholder="password" data-testid="password" value={userInput.password} onChange={updateInput} />
