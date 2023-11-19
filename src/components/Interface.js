@@ -55,22 +55,22 @@ const Interface = () => {
     <div>
       {/* Show the form all the time */}
       <form onSubmit={handleSubmit}>
-        {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
+        {errorMessage && <span style={{ color: 'red' }}>{errorMessage}</span>}
 
         <label htmlFor="name" data-testid="name">
           Name:
         </label>
-        <input type="text" placeholder="example" name="name" value={userInput.name} onChange={updateInput} />
+        <input type="text" placeholder="example" data-testid="name" value={userInput.name} onChange={updateInput} />
 
         <label htmlFor="email" data-testid="email">
           Email address:
         </label>
-        <input type="text" placeholder="example@gmail.com" name="email" value={userInput.email} onChange={updateInput} />
+        <input type="text" placeholder="example@gmail.com" data-testid="email" value={userInput.email} onChange={updateInput} />
 
         <label htmlFor="gender" data-testid="gender">
           Gender:
         </label>
-        <select name="gender" value={userInput.gender} onChange={updateInput}>
+        <select data-testid="gender" value={userInput.gender} onChange={updateInput}>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
@@ -79,12 +79,12 @@ const Interface = () => {
         <label htmlFor="phoneNumber" data-testid="phoneNumber">
           Phone Number:
         </label>
-        <input type="text" placeholder="phoneno" name="phoneNumber" value={userInput.phoneNumber} onChange={updateInput} />
+        <input type="text" placeholder="phoneno" data-testid="phoneNumber" value={userInput.phoneNumber} onChange={updateInput} />
 
         <label htmlFor="password" data-testid="password">
           Password:
         </label>
-        <input type="password" placeholder="password" name="password" value={userInput.password} onChange={updateInput} />
+        <input type="password" placeholder="password" data-testid="password" value={userInput.password} onChange={updateInput} />
 
         <button type="submit" data-testid="submit">
           Submit
