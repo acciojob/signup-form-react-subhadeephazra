@@ -90,6 +90,9 @@ const Interface = () => {
           Submit
         </button>
       </form>
+      {
+        errorMessage && <p>{errorMessage}</p>
+      }
     </div>
   );
 };
